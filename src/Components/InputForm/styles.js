@@ -15,11 +15,35 @@ export const Container = styled.div`
         gap: 1em;
         width: 100%;
     }
+
+    @media (max-width: 730px){
+        form{
+            flex-direction: column;
+        }
+        .input{
+            width: 100%;
+        }
+
+
+    }
 `;
 export const RadioGroup = styled.div`
     display: flex;
     align-items: center;
     color: #fff;
     gap: 0.5em;
+
+`;
+export const Radios = styled.div`
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 0.5em;
+    
+    @media (max-width: 730px){
+        display: flex;
+        align-items: center;
+        gap: 5em;
+    }
 
 `;

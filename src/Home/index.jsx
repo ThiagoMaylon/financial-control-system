@@ -27,7 +27,7 @@ export default function Home(){
         setSaldo(Saldototal);
         setEntrada(Entradas);
         setSaida(Saidas);
-
+// eslint-disable-next-line
     }, [atualizaGrid])
 
     function onDelete(index){

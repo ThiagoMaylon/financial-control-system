@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, RadioGroup } from './styles';
+import { Container, RadioGroup, Radios } from './styles';
 
 export default function InputForm({ handleSave }) {
     const [descricao, setDescricao] = useState('');
@@ -22,19 +22,22 @@ export default function InputForm({ handleSave }) {
         <Container>
             <form onSubmit={salvar}>
 
-                <input type="text" placeholder='Informe a descrição' onChange={e => setDescricao(e.target.value)} />
+                <input type="text" className='input' placeholder='Informe a descrição' onChange={e => setDescricao(e.target.value)} />
 
-                <input type="text" placeholder='Informe o valor' onChange={e => setValor(e.target.value)}/>
+                <input type="text" className='input' placeholder='Informe o valor' onChange={e => setValor(e.target.value)}/>
 
-                <RadioGroup>
-                    <input type="radio" name="group1" id="radioEntrada"  onChange={() => setTipo(0)} />
-                    <label htmlFor="radioEntrada">Entrada</label>
-                </RadioGroup>
-                <RadioGroup>
-                    <input type="radio" name="group1" id="radioSaida" onChange={() => setTipo(1)} />
-                    <label htmlFor="radioSaida">Saida</label>
-                </RadioGroup>
-                <button type='submit'>Cadastrar</button>
+                <Radios>
+                    <RadioGroup>
+                        <input type="radio" name="group1" id="radioEntrada"  onChange={() => setTipo(0)} />
+                        <label htmlFor="radioEntrada">Entrada</label>
+                    </RadioGroup>
+                    <RadioGroup>
+                        <input type="radio" name="group1" id="radioSaida" onChange={() => setTipo(1)} />
+                        <label htmlFor="radioSaida">Saida</label>
+                    </RadioGroup>
+                </Radios>
+               
+                <button type='submit' className='input'>Cadastrar</button>
             </form>
         </Container>
     )

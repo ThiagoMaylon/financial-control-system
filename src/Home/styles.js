@@ -6,4 +6,10 @@ export const Container = styled.div`
     border-radius: 20px;
     background: #2c2e3a;
     padding: 20px 0;
+
+    overflow: auto;
+
+    @media (max-width: 730px){
+        height: 100vh;
+    }
 `;

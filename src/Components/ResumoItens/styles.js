@@ -25,4 +25,10 @@ export const Itens = styled.div`
     &:hover{
         transform: scale(1.1)
     }
+
+    @media (max-width: 730px) {
+        width: 90%;
+        margin: 10px auto;
+
+    }
 `;
