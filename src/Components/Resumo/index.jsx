@@ -1,15 +1,15 @@
 import ResumoItens from '../ResumoItens'
 import { ResumoFinanceiro } from './styles'
 
-export default function Resumo() {
+export default function Resumo({saldo, entrada, saida}) {
     return(
         <>
             <ResumoFinanceiro>
-                <ResumoItens valor={50} titulo="Saldo" color="53369e" borderColor="6c63ff" />
+                <ResumoItens valor={saldo} titulo="Saldo" color="53369e" borderColor="6c63ff" />
 
-                <ResumoItens valor={50} titulo="Entrada" color="059705" borderColor="0bfb0e" />
+                <ResumoItens valor={entrada} titulo="Entrada" color="059705" borderColor="0bfb0e" />
                 
-                <ResumoItens valor={50} titulo="Saida" color="e74545" borderColor="e99d9d" />
+                <ResumoItens valor={saida} titulo="Saida" color="e74545" borderColor="e99d9d" />
             </ResumoFinanceiro>
         </>
     )

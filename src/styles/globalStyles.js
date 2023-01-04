@@ -27,11 +27,12 @@ export default createGlobalStyle`
     input{
         height: 40px;
         width: 70%;
-        border-radius: 0 16px;
+        border-radius: 5px;
         background: #fff;
         border: 1px solid #6c63ff;
         background: #171923;
         color: #fff;
+        padding: 4px;
 
         &::placeholder{
             background: #171923;
